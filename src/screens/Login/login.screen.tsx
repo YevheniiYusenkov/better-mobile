@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BetterInput } from '@better/components';
+import { LoginForm } from '@better/forms';
 
-export const LoginScreen = () => {
-  return <BetterInput></BetterInput>;
+export const LoginScreen: React.FunctionComponent = (): JSX.Element => {
+  return <LoginForm></LoginForm>;
 };
