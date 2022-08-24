@@ -6,6 +6,9 @@ export const BetterInputCommonStyle = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      borderStyle: 'solid',
+      borderColor: '#000000',
+      borderWidth: 2,
     },
   });
 };

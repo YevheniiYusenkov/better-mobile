@@ -1,1 +1,1 @@
-export { BetterInput } from './Input';
+export { Input } from './Input';

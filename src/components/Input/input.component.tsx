@@ -1,10 +1,14 @@
 import React from 'react';
-import { TextInput } from 'react-native';
+import { TextInput, TextInputProps } from 'react-native';
 
 import { BetterInputCommonStyle } from './input.component.style';
 
-export const BetterInput = () => {
+export const Input: React.FC<TextInputProps> = (props): JSX.Element => {
   const commonStyle = BetterInputCommonStyle();
 
-  return <TextInput style={commonStyle.Input}></TextInput>;
+  return (
+    <TextInput style={commonStyle.Input} {...props}>
+      {props.children}
+    </TextInput>
+  );
 };
