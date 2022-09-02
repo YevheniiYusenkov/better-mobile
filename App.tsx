@@ -1,12 +1,19 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { LoginScreen } from '@better/screens';
+import { RootStackParams } from '@better/types';
+import { LoginScreen, TestScreen } from '@better/screens';
 
-export const App = () => {
+const Stack = createNativeStackNavigator<RootStackParams>();
+
+export const App: React.FunctionComponent = () => {
   return (
-    <SafeAreaView>
-      <LoginScreen></LoginScreen>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name={'Login'} component={LoginScreen} />
+        <Stack.Screen name={'Test'} component={TestScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
